@@ -22,6 +22,17 @@ cc_defaults {
     ],
 }
 
+cc_library_shared {
+    name: "android.hidl.base@1.0",
+    vendor_available: true,
+    shared_libs: [
+        "libhidltransport",
+    ],
+    export_shared_lib_headers: [
+        "libhidltransport",
+    ],
+}
+
 cc_test {
     name: "libhidl_test",
     defaults: ["libhidl-defaults"],
